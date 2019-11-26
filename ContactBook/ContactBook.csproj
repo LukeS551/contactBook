@@ -5,7 +5,30 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="obj\**" />
+    <Compile Remove="Views\Contacts\**" />
+    <Content Remove="obj\**" />
+    <Content Remove="Views\Contacts\**" />
+    <EmbeddedResource Remove="obj\**" />
+    <EmbeddedResource Remove="Views\Contacts\**" />
+    <None Remove="obj\**" />
+    <None Remove="Views\Contacts\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\ContactsController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="12.2.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Home\Create.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
   </ItemGroup>
 
 </Project>
